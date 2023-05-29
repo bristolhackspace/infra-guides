@@ -34,5 +34,9 @@ Once happy the default configuration symlink can be deleted from `/etc/nginx/sit
 ## Database setup
 Install PostgreSQL with `sudo apt install postgresql`. Ensure it is set to run on boot with SystemD.
 
-Create a new superuser account to make management a little easier `sudo -u postgres createuser -s <your_username>`. There's no need to set a password as it will trust your current login.
+Create a new superuser account to make management a little easier `sudo -u postgres createuser -s <your_username>`.
 
+There's two options for accessing the database remotely from a tool such as pgAdmin:
+
+* Forward the unix socket to a local port with a command such as `ssh -L 5432:/run/postgresql/.s.PGSQL.5432 -N <your_username>@<servername>`. Connect pgAdmin to the port on localhost. 
+* Forward the remote port 5432. You will need to set a password for your database user if you use this option, but you can use the SSH tunnel option directly from pgAdmin.
