@@ -2,7 +2,7 @@
 Below are the steps used to setup a local server within the Hackspace. Currently this is a Raspberry Pi 4.
 
 ## Installing the OS
-Using the Raspberry Pi imager, install the Raspberry Pi OS Lite onto an external hard drive/SSD. The following advanced options should also be set:
+Using the Raspberry Pi imager, install the Raspberry Pi OS Lite 64bit onto an external hard drive/SSD. The following advanced options should also be set:
 
 * Hostname. Set to something unique. There will often be other Raspberry Pis in the hackspace.
 * Enable SSH. Recommended public-key authentication only.
